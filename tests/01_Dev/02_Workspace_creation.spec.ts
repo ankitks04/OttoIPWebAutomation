@@ -17,13 +17,13 @@ test("login test", async ({ page }) => {
         timeout: 80000,
     });
 
-    //await page.locator("#root > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > button").click({
-    // timeout: 80000,
-    //  });
-
-    await page.getByText("Dev-Ankit-testt9__Test39").click({
-        timeout: 6000,
+    await page.locator("#root > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > button").click({
+        timeout: 80000,
     });
+
+    //await page.getByText("Dev-Ankit-testt9__Test39").click({
+    //  timeout: 6000,
+    // });
 
     await page.locator("button").nth(5).click({
         timeout: 90000,
@@ -37,7 +37,9 @@ test("login test", async ({ page }) => {
         timeout: 70000,
     });
 
-    await page.getByText("General").click({
+
+    await page.getByRole("option", { name: "General" }).click({
+        //await page.getByText("General").click({
 
         //await page.locator("#radix-_r_nb_").click({
         timeout: 70000,
